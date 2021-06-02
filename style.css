@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url("./assets/813007.gif") bottom center / cover no-repeat;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+       transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+.btn {
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #e92e3d;
+    color: #fff;
+    padding: 15px 0;
+    width: 150px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    outline: none;
+    transform: translateY(-1px);
+}
+
+#text-heading {
+    font-size: 30px;
+    font-family: 'WaltographRegular';
+    margin-top: 20px;
+}
+#container {
+    position: relative;
+    text-align: center;
+    width: 1200px;
+    height: 500px;
+    border: 2px solid #eeee0a;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#left {
+    float: left;
+    margin: 80px 80px;
+    padding: 24px 0;
+}
+
+#help {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    font-size: 17px;
+    font-family: Courier;
+
+}
+
+#rules {
+    float: left;
+    cursor: help;
+}
+
+#rules i {
+    font-size: 25px;
+}
+#content {
+    width: 350px;
+    height: 320px;
+    border: 5px solid #4e3232;
+    box-shadow: 5px 5px 10px #000;
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    display: none;
+    border-radius: 10px;
+    background-color: white;
+
+
+}
+
+#recharge {
+    float: left;
+    margin-left: 75px;
+    cursor: copy;
+
+}
+
+#recharge i {
+    font-size: 25px;
+}
+
+.dice img {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+#rollBtn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#rollBtn .btn {
+    border-radius: 50%;
+    background-color: greenyellow;
+    color: darkred;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#playBtn {
+    text-align: center;
+    margin-top: 30px;
+}
+#moneys {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Courier;
+    color: #996d03
+}
+
+
+
+.notify p {
+    color: #e92e3d;
+    font-size: 18px;
+    font-style: oblique;
+    display: none;
+}
+
+#board {
+    margin-right: 50px;
+    margin-top: 8px;
+}
+/*Increase/decrease btn*/
+form {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 0;
+    background: #c4701d;
+    user-select: none;
+    color: #fff;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+form .decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+form .increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+} */
+
+input[type*='number'] {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    color: #996d03;
+    font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

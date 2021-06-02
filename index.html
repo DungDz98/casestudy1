@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dung's CaseStudy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/waltograph" type="text/css"/>
+
+</head>
+<body>
+<div id="main">
+    <div id="text-heading">
+<h1 class="text-center">Bầu cua</h1>
+<h3 class="text-center">Mại dzô mại dzô!</h3>
+    </div>
+<div id="container">
+    <div id="left">
+        <div id="help">
+            <div id="rules" onclick="ruleDialog()"><i class="fas fa-question-circle"></i> Luật chơi
+                <div id="content">
+                    <h1>Luật chơi</h1>
+                    <p>
+                        Tại khu vực linh vật, chọn linh vật bạn dự đoán và số tiền cược tương ứng. <br>
+                        Tại khu vực chức năng, chọn lắc và chờ kết quả. Trừ lần đặt đầu tiên, sau đó người chơi có thể lặp lại lần cược trước đó nếu muốn duy trì một kết quả để ăn to. <br>
+                        Có thể xóa cược trước khi lắc nếu muốn đặt lại. <br>
+                        Lắc để ra kết quả. Số tiền của người chơi sẽ liên tục được cập nhật tại Total.</p>
+                </div>
+            </div>
+            <div id="recharge" onclick="recharge()">Nạp thêm tiền <i class="fas fa-plus-circle"></i></div>
+        </div>
+        <div class="dice">
+            <img src="assets/1-cop.jpg" height="120" width="120" id="dice1"/>
+            <img src="assets/1-cop.jpg" height="120" width="120" id="dice2"/>
+            <img src="assets/1-cop.jpg" height="120" width="120" id="dice3"/>
+        </div>
+        <div id="rollBtn">
+            <button class="btn" onclick="rollAnimals()">Lắc</button>
+        </div>
+        <div id="playBtn">
+            <button class="btn" onclick="window.location.reload()">Chơi lại</button>
+            <button class="btn" onclick="resetCoins()">Cược lại</button>
+        </div>
+        <div id="moneys"><i class="fas fa-coins" style="color: #996d03"></i> Total:
+            <span id="totalCoins">50</span></div>
+        <div class="notify"><p>Số tiền còn lại không đủ! Vui lòng nạp thêm</p></div>
+
+    </div>
+
+    <div id="board">
+        <table cellspacing="4">
+            <tr>
+                <td>
+                    <img src="assets/1-cop.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number1')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number1" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number1')" value="Increase Value">+
+                        </div>
+                    </form>
+
+                </td>
+                <td>
+                    <img src="assets/2-bau.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number2')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number2" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number2')" value="Increase Value">+
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <img src="assets/3-ga.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number3')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number3" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number3')" value="Increase Value">+
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="assets/4-tom.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number4')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number4" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number4')" value="Increase Value">+
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <img src="assets/5-ca.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number5')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number5" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number5')" value="Increase Value">+
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <img src="assets/6-cua.jpg" height="200" width="200"/>
+                    <form>
+                        <div class="value-button decrease" onclick="decreaseValue('number6')" value="Decrease Value">-
+                        </div>
+                        <input type="number" id="number6" value="0"/>
+                        <div class="value-button increase" onclick="increaseValue('number6')" value="Increase Value">+
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<audio controls autoplay loop>
+    <source src="./assets/Nhac-Xo-So-Remix-DJ-Troll.mp3" type="audio/mpeg">
+</audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
